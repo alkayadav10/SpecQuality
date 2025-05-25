@@ -76,7 +76,7 @@ For each spectrum, the following features are calculated:
 
     *   A tab-separated values (TSV) file, typically an output from the MSGF+ search engine.
 
-    *   The script expects to find the scan title/identifier in the 4th column (index 3) and the Q-value in the 17th column (index 16) of this file. These indices might need adjustment if your MSGF+ output format differs.
+    *   The script expects to find the scan title/identifier (MGF compatible) in the 4th column (index 3) and the Q-value in the 17th column (index 16) of this file. These indices might need adjustment if your MSGF+ output format differs.
 
  
 
@@ -88,7 +88,7 @@ The script generates one or two output files in the same directory as the input 
 
  
 
-1.  **`<mgf_file_base>_SQS_V7.tsv`:**
+1.  **`<mgf_file_base>_SQS.tsv`:**
 
     *   A tab-separated file containing the calculated spectral features and SQS for every spectrum in the input MGF file that passes the minimum peak cutoff.
 
@@ -96,7 +96,7 @@ The script generates one or two output files in the same directory as the input 
 
  
 
-2.  **`<mgf_file_base>_PSM_SQS_V7.tsv` (Generated if MSGF+ file is provided):**
+2.  **`<mgf_file_base>_PSM_SQS.tsv` (Generated if MSGF+ file is provided):**
 
     *   A tab-separated file that merges the original lines from the MSGF+ output with the corresponding spectral quality features.
 
