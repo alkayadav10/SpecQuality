@@ -46,6 +46,8 @@ For each spectrum, the following features are calculated:
 
 **Spectral Quality Score (`sqs`):** The geometric mean of the ten features listed above.
 
+
+
  
 
 #### 1.3. Input Files
