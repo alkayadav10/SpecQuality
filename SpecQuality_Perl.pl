@@ -9,7 +9,8 @@ use constant H=>1.007825;
 
 # INPUT: MGF 
 # # 21:41 14 October 2024
-# Updated to version 6 Date : 29 April 2025
+# Updated to version 0.6 Date : 29 April 2025
+# Updated to version 0.7 Date : 24 May 2025
 # OUTPUT : Scan,SQS (Spectral Quality Score)
 
 
