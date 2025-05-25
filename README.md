@@ -44,7 +44,7 @@ For each spectrum, the following features are calculated:
 
 10. **Average Relative Intensity (`ari`):** Product of the log10 precursor intensity and the ratio of signal peaks to total peaks.
 
-11. **Spectral Quality Score (`sqs`):** The geometric mean of the ten features listed above.
+**Spectral Quality Score (`sqs`):** The geometric mean of the ten features listed above.
 
  
 
