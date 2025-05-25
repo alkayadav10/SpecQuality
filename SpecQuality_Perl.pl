@@ -53,10 +53,10 @@ my %amino_acid_masses = (
 );
 
 my $out=$mgf_file;
-$out=~s/\.mgf/_SQS_V7.tsv/;
+$out=~s/\.mgf/_SQS.tsv/;
 
 my $PSM_SQS=$mgf_file;
-$PSM_SQS=~s/\.mgf$/_PSM_SQS_V7.tsv/;
+$PSM_SQS=~s/\.mgf$/_PSM_SQS.tsv/;
 
 open (MGF,$mgf_file) or die $!;
 open (OUT,">$out") or die $!;
