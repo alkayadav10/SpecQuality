@@ -97,7 +97,7 @@ The script generates one or two output files in the same directory as the input 
 
  
 
-2.  **`<mgf_file_base>_PSM_SQS.tsv` (Generated if MSGF+ file is provided):**
+2.  **`<msms_file_base>_PSM_SQS.tsv` (Generated if MSGF+ file is provided):**
 
     *   A tab-separated file that merges the original lines from the MSGF+ output with the corresponding spectral quality features and spectral quality score (SQS).
 
@@ -109,7 +109,7 @@ The script generates one or two output files in the same directory as the input 
 
  
 
-*   **Tolerance for mass matching:** `0.5 Da` (hardcoded, `param_tolerance`, `param_tolerance_unit`). This is used for amino acid mass differences, complement matching, isotope, and neutral loss detection.
+*   **Tolerance for mass matching:** `0.5 Da` (hardcoded, `param_tolerance`, `param_tolerance_unit`). This is used for amino acid mass differences, complement matching, isotope, and neutral loss detection. This should be edited to match the experimental/instrumental tolerance.
 
 *   **Noise Threshold:** `5.0%` (hardcoded, `param_noise_threshold`). Peaks with normalized intensity below this threshold are considered noise.
 
