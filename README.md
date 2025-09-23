@@ -30,7 +30,7 @@ For each spectrum, the following features are calculated:
 
 3.  **Signal-to-Noise Ratio (`snr`):** Log10 of the ratio of total intensity of signal peaks to total intensity of noise peaks.
 
-4.  **Intensity (`intensity`):** Log10 of the precursor ion intensity (if available in MGF, otherwise defaults).
+4.  **Intensity (`intensity`):** Log10 of the precursor ion intensity (if available in MGF, otherwise defaults to TIC based Intensity summed up from MS/MS intensities). 
 
 5.  **Peak Density (`peak_density`):** Number of peaks per 100 m/z range.
 
@@ -54,11 +54,12 @@ For each spectrum, the following features are calculated:
 
  
 
-1.  **MGF File (Required):**
+1.  **Spectra File (Required): (mzML or MGF format)**
 
-    *   A standard Mascot Generic Format file containing MS/MS spectra.
+    *   A standard HUPO-PSI mzML format, or
+    *   Mascot Generic Format file containing MS/MS spectra.
 
-    *   Expected fields per spectrum:
+    *   Expected fields per spectrum for MGF:
 
         *   `BEGIN IONS` / `END IONS`
 
@@ -88,19 +89,19 @@ The script generates one or two output files in the same directory as the input 
 
  
 
-1.  **`<mgf_file_base>_SQS.tsv`:**
+1.  **`<msmsinput_file_base>_SQS.tsv`:**
 
     *   A tab-separated file containing the calculated spectral features and SQS for every spectrum in the input MGF file that passes the minimum peak cutoff.
 
-    *   Columns: `scan`, `mz`, `z`, `RT`, `PeakCount`, `SignalPeaksCount`, `SNR`, `Intensity`, `PeakDensity`, `GoodDiffFraction`, `ComplementsFraction`, `IsotopePeaks`, `NeutralLossPeaks`, `AverageRelativeIntensity`, `SQS_GM`.
+    *   Columns: `scan`, `mz`, `z`, `RT`, `PeakCount`, `SignalPeaksCount`, `SNR`, `Intensity`, `PeakDensity`, `GoodDiffFraction`, `ComplementsFraction`, `IsotopePeaks`, `NeutralLossPeaks`, `AverageRelativeIntensity`, `SQS`.
 
  
 
 2.  **`<mgf_file_base>_PSM_SQS.tsv` (Generated if MSGF+ file is provided):**
 
-    *   A tab-separated file that merges the original lines from the MSGF+ output with the corresponding spectral quality features.
+    *   A tab-separated file that merges the original lines from the MSGF+ output with the corresponding spectral quality features and spectral quality score (SQS).
 
-    *   It appends the 11 quality features/SQS and a `Label` column (categorizing PSM quality based on Q-value: "Excellent", "Good", "Average", "Poor") to each matched MSGF+ entry.
+    *   It appends the quality features/SQS and a `Label` column (categorizing PSM quality based on Q-value: "Excellent", "Good", "Average", "Poor") to each matched MSGF+ entry.
 
  
 
