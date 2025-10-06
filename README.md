@@ -2,7 +2,7 @@
 SpecQuality is a tool for quality assessment of MS/MS spectra
 ## Spectral Quality Score (SQS) Calculator
 
-**Version:** 0.7
+**Version:** 1.0
 
 **Language:** Python / Perl
 
@@ -26,11 +26,33 @@ This tool processes tandem mass spectrometry (MS/MS) data from MGF files to asse
 
 Optionally, if an MSGF+ (a common peptide identification search engine) output file (typically in TSV format) is provided, the script will merge the calculated SQS and its component features with the Peptide-Spectrum Matches (PSMs) from the MSGF+ results. This allows for correlating spectral quality with identification confidence (e.g., Q-value).
 
- 
+
+# SpecQuality: Spectral Quality Prediction Tool
+
+A comprehensive tool for predicting spectral quality in mass spectrometry data using both geometric mean methods and machine learning approaches.
+
+## Overview
+
+SpecQuality calculates spectral quality scores (SQS) for mass spectrometry data through two complementary approaches:
+
+1. **Traditional Method**: Geometric mean of 10 spectral features
+2. **Machine Learning Method**: XGBoost-based prediction using pre-trained models
+
+The tool supports both **MGF** and **mzML** file formats and provides comprehensive feature extraction and quality assessment.
+
+## Quick Start
+
+### Basic Feature Extraction (Geometric Mean Only)
+
+```bash
+# For MGF files:
+python SpecQuality_Calculate_Features.py input_file.mgf
+
+# For mzML files:
+python SpecQuality_Calculate_Features.py input_file.mzml
 
 #### 1.2. Key Features Calculated
 
- 
 
 For each spectrum, the following features are calculated:
 
