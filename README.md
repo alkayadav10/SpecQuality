@@ -11,12 +11,12 @@ SpecQuality is a tool for quality assessment of MS/MS spectra
 #### 1.1. Purpose
 
 This tool processes tandem mass spectrometry (MS/MS) data from MGF files to assess the quality of each spectrum. It calculates a set of ten distinct spectral features and then combines them into a **Spectral Quality Score (SQS)**, which are defined based on how they are calculated:-
-*the geometric mean of 5 features (**SQS5_gm**)
-*the geometric mean of 10 features (**SQS5_XGB_clf**)
-*5 feature based XGBoost classifier trained SQS (**SQS5_XGB_clf**)
-*10 feature based XGBoost classifier trained SQS (**SQS10_XGB_clf**)
-*5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
-*5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
+  *the geometric mean of 5 features (**SQS5_gm**)
+  *the geometric mean of 10 features (**SQS5_XGB_clf**)
+  *5 feature based XGBoost classifier trained SQS (**SQS5_XGB_clf**)
+  *10 feature based XGBoost classifier trained SQS (**SQS10_XGB_clf**)
+  *5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
+  *5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
 
 **Recommendation**: **SQS5_XGB_clf**, **SQS10_XGB_clf** are recommended
 
