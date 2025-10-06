@@ -26,6 +26,7 @@ This tool processes tandem mass spectrometry (MS/MS) data from MGF files to asse
 
 Optionally, if an MSGF+ (a common peptide identification search engine) output file (typically in TSV format) is provided, the script will merge the calculated SQS and its component features with the Peptide-Spectrum Matches (PSMs) from the MSGF+ results. This allows for correlating spectral quality with identification confidence (e.g., Q-value).
 
+Also check project Wiki [https://github.com/alkayadav10/SpecQuality/wiki/Documentation] for details
 
 # SpecQuality: Spectral Quality Prediction Tool
 
