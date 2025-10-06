@@ -10,7 +10,15 @@ SpecQuality is a tool for quality assessment of MS/MS spectra
 
 #### 1.1. Purpose
 
-This script processes tandem mass spectrometry (MS/MS) data from MGF files to assess the quality of each spectrum. It calculates a set of ten distinct spectral features and then combines them into a single **Spectral Quality Score (SQS)**, which is the geometric mean of these features.
+This tool processes tandem mass spectrometry (MS/MS) data from MGF files to assess the quality of each spectrum. It calculates a set of ten distinct spectral features and then combines them into a **Spectral Quality Score (SQS)**, which are defined based on how they are calculated:-
+--the geometric mean of 5 features (**SQS5_gm**)
+--the geometric mean of 10 features (**SQS5_XGB_clf**)
+--5 feature based XGBoost classifier trained SQS (**SQS5_XGB_clf**)
+--10 feature based XGBoost classifier trained SQS (**SQS10_XGB_clf**)
+--5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
+--5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
+
+**Recommendation**: **SQS5_XGB_clf**, **SQS10_XGB_clf** are recommended
 
 Optionally, if an MSGF+ (a common peptide identification search engine) output file (typically in TSV format) is provided, the script will merge the calculated SQS and its component features with the Peptide-Spectrum Matches (PSMs) from the MSGF+ results. This allows for correlating spectral quality with identification confidence (e.g., Q-value).
 
