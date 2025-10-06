@@ -18,7 +18,11 @@ This tool processes tandem mass spectrometry (MS/MS) data from MGF files to asse
   * 5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
   * 5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
 
-**Recommendation**: **SQS5_XGB_clf**, **SQS10_XGB_clf** are recommended
+**Recommendation**:
+  * **SQS5_XGB_clf**
+  * **SQS10_XGB_clf** are recommended, followed by
+  * **SQS5_XGB_gm**
+  * **SQS10_XGB_clf**
 
 Optionally, if an MSGF+ (a common peptide identification search engine) output file (typically in TSV format) is provided, the script will merge the calculated SQS and its component features with the Peptide-Spectrum Matches (PSMs) from the MSGF+ results. This allows for correlating spectral quality with identification confidence (e.g., Q-value).
 
