@@ -1,3 +1,6 @@
 *.pkl filter=lfs diff=lfs merge=lfs -text
 *.mgf filter=lfs diff=lfs merge=lfs -text
 *.mzML filter=lfs diff=lfs merge=lfs -text
+*.tsv filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
