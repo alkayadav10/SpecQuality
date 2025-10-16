@@ -20,12 +20,11 @@ This tool processes tandem mass spectrometry (MS/MS) data from MGF files to asse
 
 **Recommendation**:
   * **SQS10_gm**
-  * **SQS5_gm** are recommended, followed by
+  * **SQS5_gm** are recommended, followed by-
   * **SQS10_XGB_clf**
   * **SQS5_XGB_clf** 
 
-
-Optionally, if an MSGF+ (a common peptide identification search engine) output file (typically in TSV format) is provided, the script will merge the calculated SQS and its component features with the Peptide-Spectrum Matches (PSMs) from the MSGF+ results. This allows for correlating spectral quality with identification confidence (e.g., Q-value).
+If you only wish to predict quality based on GM of features, please use any one of the scripts: **SpecQuality_Calculate_Features.pl** or **SpecQuality_Calculate_Features.py**. IF you wish to use the XGBoost based predictor. Use any of these two scripts, followed by **SpecQuality_Predict.py**
 
 Also check project Wiki [https://github.com/alkayadav10/SpecQuality/wiki/Documentation] for details
 
