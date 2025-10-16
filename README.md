@@ -16,7 +16,7 @@ This tool processes tandem mass spectrometry (MS/MS) data from MGF files to asse
   * 5 feature based XGBoost classifier trained SQS (**SQS5_XGB_clf**)
   * 10 feature based XGBoost classifier trained SQS (**SQS10_XGB_clf**)
   * 5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
-  * 5 feature based XGBoost regression trained SQS (**SQS5_XGB_reg**)
+  * 10 feature based XGBoost regression trained SQS (**SQS10_XGB_reg**)
 
 **Recommendation**:
   * **SQS10_gm**
